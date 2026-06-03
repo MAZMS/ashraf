@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>OG image generator — Asraf Buklao</title>
+<!--
+  This page renders the 1200x630 social-share card used as og-image.png.
+  To (re)generate the PNG:
+    • Easiest: open this file, then in Chrome DevTools device toolbar set 1200x630 and capture, OR
+    • Headless: chrome --headless --screenshot=og-image.png --window-size=1200,630 og-image.html
+  It is NOT part of the live site — only og-image.png is referenced by index.html.
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{width:1200px;height:630px;overflow:hidden;background:#0a0e1a}
+  .card{
+    position:relative;width:1200px;height:630px;padding:70px 72px 120px;display:flex;flex-direction:column;justify-content:center;
+    color:#e8edf9;font-family:"Inter",system-ui,sans-serif;
+    background:
+      radial-gradient(900px 600px at 85% -10%, rgba(79,140,255,.30), transparent 60%),
+      radial-gradient(700px 600px at 0% 110%, rgba(124,92,255,.26), transparent 55%),
+      #0a0e1a;
+  }
+  .card::after{
+    content:"";position:absolute;inset:0;opacity:.5;
+    background-image:linear-gradient(rgba(255,255,255,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.07) 1px,transparent 1px);
+    background-size:48px 48px;mask-image:radial-gradient(circle at 40% 30%,#000,transparent 80%);
+  }
+  .float{position:absolute;font-family:"Space Grotesk",serif;color:rgba(255,255,255,.06);pointer-events:none}
+  .p1{top:40px;right:90px;font-size:170px}
+  .p2{bottom:30px;right:300px;font-size:120px}
+  .row{position:relative;z-index:1;display:flex;align-items:center;gap:22px;margin-bottom:30px}
+  .avatar{width:96px;height:96px;border-radius:24px;display:grid;place-items:center;
+    font-family:"Space Grotesk",serif;font-size:54px;font-weight:700;color:#fff;
+    background:linear-gradient(135deg,#4f8cff,#7c5cff);box-shadow:0 18px 44px -12px rgba(79,140,255,.7)}
+  .pill{font-size:22px;color:#9aa6c4;border:1px solid rgba(255,255,255,.12);background:rgba(18,26,50,.8);
+    padding:10px 20px;border-radius:100px}
+  h1{position:relative;z-index:1;font-family:"Space Grotesk",sans-serif;font-weight:700;font-size:90px;line-height:1.0;letter-spacing:-.02em;margin-bottom:22px}
+  .grad{background:linear-gradient(120deg,#4f8cff,#7c5cff);-webkit-background-clip:text;background-clip:text;color:transparent}
+  p.sub{position:relative;z-index:1;font-size:28px;color:#9aa6c4;max-width:760px;margin-bottom:30px}
+  .tags{position:relative;z-index:1;display:flex;gap:14px;flex-wrap:wrap}
+  .tag{font-family:"Space Grotesk",sans-serif;font-size:22px;color:#e8edf9;background:rgba(18,26,50,.9);
+    border:1px solid rgba(255,255,255,.1);padding:11px 20px;border-radius:12px}
+  .url{position:absolute;bottom:60px;left:72px;z-index:2;font-family:"Space Grotesk",sans-serif;font-size:24px;color:#6ba2ff}
+</style>
+</head>
+<body>
+  <div class="card">
+    <span class="float p1">∑</span><span class="float p2">∫</span>
+    <div class="row">
+      <div class="avatar">∑</div>
+      <div class="pill">Mathematics @ AdZU · Class of 2029</div>
+    </div>
+    <h1>Asraf <span class="grad">Buklao</span></h1>
+    <p class="sub">Combinatorics enthusiast &amp; competitive mathematician from Zamboanga City — chasing the title of math champion, four times over.</p>
+    <div class="tags">
+      <span class="tag">∑ Combinatorics</span>
+      <span class="tag">🏆 Competitive Math</span>
+      <span class="tag">🧠 Problem Solving</span>
+    </div>
+    <div class="url">facebook.com/1rraf</div>
+  </div>
+</body>
+</html>
