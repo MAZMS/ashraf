@@ -1,0 +1,12 @@
+{
+  "name": "ashraf-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Asraf Buklao portfolio — static site served by a tiny Node server",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
